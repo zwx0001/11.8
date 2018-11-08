@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/fonts/iconfont.css">
+    <!-- <link rel="stylesheet" href="./css/swiper.css"> -->
+    <link rel="stylesheet" href="./scss/style.css">
+    <script src="./libs/require.js" data-main="./js/main.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <p><img src="./images/ico_r1_c1.png" alt=""></p>
+            <div class="search"><input type="text" placeholder="请输入搜索名称"></div>
+            <p><img src="./images/ico_r1_c3.png" alt=""></p>
+        </header>
+        <div class="nav">
+            <ul class="list">
+                <li class="active">推荐</li>
+                <li>手机</li>
+                <li>智能</li>
+                <li>电视</li>
+                <li>电脑</li>
+                <li>全面屏</li>
+                <li>生活常识</li>
+                <li>娱乐</li>
+                <li>智能</li>
+                <li>电视</li>
+                <li>电脑</li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="box">
+                <h1>每日精选</h1>
+                <div class="img">
+                    <!-- <img src="./images/1.jpg" alt="">
+                    <img src="./images/10.jpg" alt="">
+                    <img src="./images/2.jpg" alt="">
+                    <img src="./images/3.jpg" alt="">
+                    <img src="./images/4.jpg" alt="">
+                    <img src="./images/5.jpg" alt="">
+                    <img src="./images/6.jpg" alt="">
+                    <img src="./images/7.jpg" alt="">
+                    <img src="./images/8.jpg" alt=""> -->
+                </div>
+            </div>
+        </div>
+        <footer id='tap'></footer>
+    </div>
+    <!-- <script src="./libs/flexible.js"></script>
+    <script src="./libs/better-scroll.js"></script> -->
+    <!-- <script src="./libs/swiper.js"></script> -->
+    <!-- <script src="./libs/zepto.js"></script>
+    <script src="./libs/handlebars-v4.0.12.js"></script>
+    <script src="./js/index.js"></script> -->
+    <script id="pic" type="text/x-handlebars-template">
+        {{#each data}}
+        <img src="./images/{{img}}" alt=""> {{/each}}
+    </script>
+    <!-- <script>
+        var myBScroll = new BScroll('.nav', {
+            probeType: 2,
+            scrollX: true
+        });
+        var myBScrol2 = new BScroll('.content', {
+            probeType: 2,
+            scrollX: true
+        });
+        $.ajax({
+            url: '/api/getData',
+            success: function(res) {
+                res = JSON.parse(res);
+                if (res.code === 0) {
+                    render(res);
+                } else {
+                    alert('请求数据有误!');
+                }
+            }
+        });
+
+        function render(data) {
+            //抓取模板数据
+            var theTemplateScript = $('#pic').html();
+            //编译模板
+            var theTemplate = Handlebars.compile(theTemplateScript);
+            //定义数据
+
+            //把数据传到模板
+            var theCompiledHtml = theTemplate(data);
+            //更新数据
+            $('.img').append(theCompiledHtml);
+        } -->
+    </script>
+
+</body>
+
+</html>
